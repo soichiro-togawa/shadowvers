@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idd: 1
+  classid: 1
+  level: 1
+  line: 1
+  eline: 1
+  priority: 1
+  kind1: MyString
+  kind2: MyString
+  manalimit: 1
+  manamin: 1
+  content: MyText
+  evolve: MyText
+  bold1: MyString
+  bold2: MyString
+  bold3: MyString
+  bold4: MyString
+
+two:
+  idd: 1
+  classid: 1
+  level: 1
+  line: 1
+  eline: 1
+  priority: 1
+  kind1: MyString
+  kind2: MyString
+  manalimit: 1
+  manamin: 1
+  content: MyText
+  evolve: MyText
+  bold1: MyString
+  bold2: MyString
+  bold3: MyString
+  bold4: MyString

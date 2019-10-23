@@ -1,0 +1,64 @@
+<div class="main users-new text-white">
+  <div class="container">
+    <a href="/"><%= image_tag "/oricamaker/background/logo.png",:size => '300x200' %></a>
+
+    <div class="form-heading"></div>
+    <div class="form users-form mt-5">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        
+        <%= form_tag("/users/create") do %>
+          <p class="text-left"><%= image_tag "/oricamaker/background/logo2.png",:size => '60x60' %>作成したいカード名を入力</p>
+          <input name="user_name" placeholder="名無しのローウェン" value="<%= @user.user_name %>" class="uname"><br>
+          <div class="text-center my-5">
+            <!--<input type="submit" value="新規登録" class="rounded-circle">-->
+            <button type="submit" class="submit_btn">画像選択へ</button>
+      
+
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+   <!--- Image Slider -->
+  <div id="slides" class="carousel slide" data-ride="carousel">
+  	<ul class="carousel-indicators">
+  		<li data-target="#slides" data-slide-to="0" class="active"></li>
+  		<li data-target="#slides" data-slide-to="1"></li>
+  		<li data-target="#slides" data-slide-to="2"></li>
+  	</ul>
+  	<div class="carousel-inner">
+  		<div class="carousel-item active">
+        <%= image_tag("/user_images/samplee1.jpg") %>
+  			<div class="carousel-caption">
+  				<h1 class="display-2">Sample</h1>
+  				<!--<h3>Create your Card</h3>-->
+  			</div>
+  		</div>
+  		<div class="carousel-item">
+  		   <%= image_tag("/user_images/sample2.jpg") %>
+  			<div class="carousel-caption">
+  				<h1 class="display-2"></h1>
+  			</div>
+  		</div>
+  		<div class="carousel-item">
+  		   <%= image_tag("/user_images/sample3.jpg") %>
+  			<div class="carousel-caption">
+  				<h1 class="display-2">Sample</h1>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <!--ツイッターボタン-->
+  <div class="text-right">
+   <a href="https://twitter.com/uzu_kumaru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="ja" data-show-count="false">Follow @uzu_kumaru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+    
+  </div>
+</div>
+
+

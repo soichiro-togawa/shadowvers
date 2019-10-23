@@ -1,0 +1,237 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+.main{
+    text-align:center;
+    
+    width: 100%;    
+    height: 1800px;
+    /*height: 100%;*/
+    /*width: 2000px;*/
+    background-image: url("/oricamaker/background/top.png");
+    background-size: cover;
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-family: "ＭＳ 明朝",serif;
+    color: white;
+}
+.upload{
+
+  border-radius: 10px;
+ width:60%;
+}
+
+
+.uname {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+}
+
+#btn {
+    /*background: #000;*/
+    background-image: url("/oricamaker/background/btn.png");
+    background-size: cover;
+    color: black;
+    cursor: pointer;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 10px;
+}
+input {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+.pla{
+  width:100%;
+  background-color: white;
+  border-radius: 10px;
+  border: solid 3px #6091d3;
+
+}
+
+.submit_btn{
+    border: 3px solid #6091d3;
+    padding:0.5rem 1rem;
+    border-radius: 10px;
+    background: #333;
+    color: #fff;
+}
+.submit_btn:hover{
+    background-image: url("/oricamaker/background/btn.png");
+    background-size: cover;
+    color: black;
+    cursor: pointer;
+}
+.submit_btn2{
+    border: 3px solid #6091d3;
+    padding:2rem 1rem;
+    border-radius: 10px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+.submit_btn2:hover{
+    background-image: url("/oricamaker/background/btn.png");
+    background-size: cover;
+    color: black;
+}
+
+
+.carousel-inner img{
+  width: 100%;
+  height: 100%;
+}
+.carousel-caption{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-caption h1{
+  font-size: 500%;
+  text-transform:uppercase;
+  text-shadow:1px 1px 15px #000;
+  opacity: 0.6;
+}
+.carousel-caption h3{
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000;
+  padding-bottom:1rem;
+}
+
+
+
+/*---Media Queries --*/
+@media (max-width: 1200px) {
+    .gazou{
+    width: 100%;
+    }
+  }
+  
+  
+@media (max-width: 992px) {
+    .gazou{
+    width: 100%;
+    }
+  }
+  
+  
+@media (max-width: 768px) {
+    .carousel-caption{
+    top: 50%;
+    }
+    .carousel-caption h1{
+    font-size: 350%;
+    }
+    .carousel-caption h3{
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom:.2rem;
+    }
+    }
+    .gazou{
+    width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption{
+     top: 50%;
+    }
+.carousel-caption h1{
+  font-size: 250%;
+}
+.carousel-caption h3{
+  font-size: 110%;
+}
+
+.carousel-indicators{
+  display: none;
+}
+
+.gazou{
+    width: 100%;
+}
+
+#btn {
+  padding-right:50px;
+}
+}
+
+
+/*ボタン*/
+  .button {
+    display: inline-block;
+    width: 200px;
+    height: 54px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 54px;
+    outline: none;
+  }
+  .button::before,
+  .button::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: '';
+  }
+  .button,
+  .button::before,
+  .button::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  
+.button {
+  position: relative;
+  z-index: 2;
+  background-color: #333;
+  border: 2px solid #fff;
+  color: #fff;
+  line-height: 50px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.button:hover {
+  color: #333;
+}
+.button::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+}
+.button:hover::after {
+  background: #fff;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+

@@ -1,0 +1,63 @@
+<div class="main users-edit">
+   <a href="/" ><%= image_tag "/oricamaker/background/logo.png",:size => '300x200' %></a>
+   
+
+   
+  <div class="container">
+    <div class="form-heading"></div>
+    <div class="form users-form mt-5">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+  
+        <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+          <p class="mt-5 text-left"><%= image_tag "/oricamaker/background/logo2.png",:size => '60x60' %>カード画像を選択</p>
+          
+          <div class="text-left upload">
+            <div id="btn">ファイルを選択</div>
+            <input name="image" type="file" accept=".jpg,.jpeg,.png" id="files"/>
+            <input class="pla" type="text" id="filename" placeholder="選択されていません" readonly />
+            <script type="text/javascript">
+             $(function() {
+                 $('#files').css({
+                     'position': 'absolute',
+                     'top': '-9999px'
+                 }).change(function() {
+                     var val = $(this).val();
+                     var path = val.replace(/\\/g, '/');
+                     var match = path.lastIndexOf('/');
+                $('#filename').css("display","inline-block");
+                     $('#filename').val(match !== -1 ? val.substring(match + 1) : val);
+                 });
+                 $('#filename').bind('keyup, keydown, keypress', function() {
+                     return false;
+                 });
+                 $('#filename, #btn').click(function() {
+                     $('#files').trigger('click');
+                 });
+             });
+            </script>          
+          </div>
+          <p class="text-left mt-5"><%= image_tag "/oricamaker/background/logo2.png",:size => '60x60' %>カード名</p>
+          <input name="user_name" value="<%= @user.user_name %>" class="uname">
+          
+          <button type="submit" class="submit_btn2 my-5 rounded-circle"><%= image_tag "/oricamaker/background/logo2.png",:size => '45x45' %>カードを作成する!!!</button>
+        <% end %>
+      </div>
+    </div>
+    
+    
+    <!--<div>-->
+    <!--  <img src="<%="/user_images/#{@user.image}"%>" class="gazou">-->
+    <!--  <div class="mt-4 text-right">-->
+    <!--    <a target="_blank" class="submit_btn" href="https://0203cd6cc6cf4d1faeef3bb2b977dc27.vfs.cloud9.ap-northeast-1.amazonaws.com/user_images/<%=@user.image%>">画像のみ表示</a>-->
+    <!--    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" width="300" height="500" data-size="large" data-text="<%=@user.user_name%>がシャドバのカードになりました。https://0203cd6cc6cf4d1faeef3bb2b977dc27.vfs.cloud9.ap-northeast-1.amazonaws.com/user_images/<%=@user.id%>.jpg" data-hashtags="シャドバオリカメーカー" data-url="a" data-related="uzu_kumaru" data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+    <!--  </div>-->
+    <!--</div>-->
+
+    
+  </div>
+</div>
