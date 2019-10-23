@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191014132813) do
+ActiveRecord::Schema.define(version: 20191023115734) do
 
-  create_table "dogs", force: :cascade do |t|
+  create_table "dogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "idd"
     t.integer  "classid"
     t.integer  "level"
@@ -23,29 +23,21 @@ ActiveRecord::Schema.define(version: 20191014132813) do
     t.string   "kind2"
     t.integer  "manalimit"
     t.integer  "manamin"
-    t.text     "content"
-    t.text     "evolve"
+    t.text     "content",    limit: 65535
+    t.text     "evolve",     limit: 65535
     t.string   "bold1"
     t.string   "bold2"
     t.string   "bold3"
     t.string   "bold4"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.integer  "class"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "user_name"
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "user_name"
-    t.integer  "priority"
   end
 
 end
