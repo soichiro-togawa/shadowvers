@@ -63,7 +63,7 @@ def update
         
         
           # 検証用
-            # @leader=3
+            # @leader=7
             # @bun=1
             # @health=1.to_s
             # mana=10
@@ -76,7 +76,7 @@ def update
              @dog1=Dog.where(classid: [@leader,9],level: @level1)
              
             # 検証用
-            # @dog1=Dog.where(idd: 230)
+            # @dog1=Dog.where(idd: 722)
              
              @dog1=@dog1.offset( rand(@dog1.count) ).first
              

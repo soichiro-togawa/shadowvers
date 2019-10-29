@@ -1,6 +1,6 @@
 <div class="main users-new text-white">
   <div class="container">
-    <a href="/"><%= image_tag "/oricamaker/background/logo.png",:size => '300x200' %></a>
+    <a href="/" alt="シャドバオリカメーカー"><%= image_tag "/oricamaker/background/logo.png",:size => '300x200' %></a>
 
     <div class="form-heading"></div>
     <div class="form users-form mt-5">
@@ -12,7 +12,7 @@
         <% end %>
         
         <%= form_tag("/users/create") do %>
-          <p class="text-left"><%= image_tag "/oricamaker/background/logo2.png",:size => '60x60' %>作成したいカード名を入力</p>
+          <p class="text-left sakusei"><%= image_tag "/oricamaker/background/logo2.png",:size => '60x60' %>作成したいカード名を入力</p>
           <input name="user_name" placeholder="名無しのローウェン" value="<%= @user.user_name %>" class="uname"><br>
           <div class="text-center my-5">
             <!--<input type="submit" value="新規登録" class="rounded-circle">-->
@@ -33,20 +33,20 @@
   	</ul>
   	<div class="carousel-inner">
   		<div class="carousel-item active">
-        <%= image_tag("/user_images/samplee1.jpg") %>
+        <%= image_tag("/oricamaker/background/sample1.jpg") %>
   			<div class="carousel-caption">
   				<h1 class="display-2">Sample</h1>
   				<!--<h3>Create your Card</h3>-->
   			</div>
   		</div>
   		<div class="carousel-item">
-  		   <%= image_tag("/user_images/sample2.jpg") %>
+  		   <%= image_tag("/oricamaker/background/sample2.jpg") %>
   			<div class="carousel-caption">
   				<h1 class="display-2"></h1>
   			</div>
   		</div>
   		<div class="carousel-item">
-  		   <%= image_tag("/user_images/sample3.jpg") %>
+  		   <%= image_tag("/oricamaker/background/sample3.jpg") %>
   			<div class="carousel-caption">
   				<h1 class="display-2">Sample</h1>
   			</div>
