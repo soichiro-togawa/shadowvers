@@ -58,7 +58,7 @@ def update
         end
         
         @health=health.to_s
-        leader=rand(1..7)
+        leader=rand(1..8)
         @leader=leader.to_s
         
         

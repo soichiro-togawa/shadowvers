@@ -165,10 +165,10 @@ input {
 
 @media (max-width: 576px) {
     .carousel-caption{
-     top: 40%;
+     top: 45%;
     }
 .carousel-caption h1{
-  font-size: 250%;
+  font-size: 200%;
 }
 .carousel-caption h3{
   font-size: 110%;
